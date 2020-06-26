@@ -17,10 +17,8 @@ public class ReversedWelcomes {
             System.out.println("Wprowadziłeś następujące imię: " + names[i]);
         }
 
-        for (int i = 4; i <= names.length; i--) {
+        for (int i = names.length -1 ; i >= 0; i--) {
             System.out.println("Witaj " + names[i] + " !");
-            if (i == 0)
-                break;
         }
 
     }
