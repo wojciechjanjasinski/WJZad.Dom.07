@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class SquaresSum {
     public static void main(String[] args) {
+        double sum = 0.0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj proszę liczbę całkowitoliczową, która nada rozmiar tablicy liczb zmiennoprzecinkowych: ");
         int userTableGreatness = scanner.nextInt();
@@ -15,8 +16,9 @@ public class SquaresSum {
         }
 
         for (Double userNumbersInput : userTable) {
-            System.out.println(userNumbersInput);
-            System.out.println(Math.pow(userNumbersInput, 2));
+
+            sum += userNumbersInput;
+            System.out.println(Math.pow(sum, 2));
         }
 
     }
