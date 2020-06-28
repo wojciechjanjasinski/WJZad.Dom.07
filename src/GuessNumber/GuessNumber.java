@@ -7,28 +7,23 @@ public class GuessNumber {
         Scanner scanner = new Scanner(System.in);
         int userInputNumber;
 
-        do{
+        do {
             System.out.println("Zgadnij proszę liczbę:");
             userInputNumber = scanner.nextInt();
-            if (userInputNumber < 100){
-                System.out.println( "Liczba: " + userInputNumber + " podana przez Ciebie jest zbyt mała. Spróbuj proszę zgadnąć jeszcze raz.");
+            if (userInputNumber < 100) {
+                System.out.println("Liczba: " + userInputNumber + " podana przez Ciebie jest zbyt mała. Spróbuj proszę zgadnąć jeszcze raz.");
                 userInputNumber = scanner.nextInt();
             }
-            if (userInputNumber > 200){
-                System.out.println( "Liczba: " + userInputNumber + " podana przez Ciebie jest zbyt duża. Spróbuj proszę zgadnąć jeszcze raz.");
+            if (userInputNumber > 200) {
+                System.out.println("Liczba: " + userInputNumber + " podana przez Ciebie jest zbyt duża. Spróbuj proszę zgadnąć jeszcze raz.");
                 userInputNumber = scanner.nextInt();
             }
-            if (userInputNumber % 3 != 0){
+            if (userInputNumber % 3 != 0) {
                 System.out.println("Liczba: " + userInputNumber + " podana przez Ciebie nie dzieli się przez 3. Spróbuj proszę zgadnąć jeszcze raz.");
                 userInputNumber = scanner.nextInt();
             }
-        }while (!((userInputNumber > 100 && userInputNumber < 200) && userInputNumber % 3 == 0));
+        } while (!((userInputNumber > 100 && userInputNumber < 200) && userInputNumber % 3 == 0));
 
-//        while (!((userInputNumber > 100 && userInputNumber < 200) && userInputNumber % 3 == 0)) {
-//            System.out.println("Niestety Twoja liczba albo jest spoza oczekiwanego zakresu lub nie jest podzielna przez 3 bez reszty. Spróbuj proszę jeszcze raz:");
-//            userInputNumber = scanner.nextInt();
-//
-//        }
         System.out.println("Brawo! Twoja liczba: " + userInputNumber + " jest poprawna ponieważ dzieli się przez 3 i wchodzi w zakres liczb od 100 do 200.");
         scanner.close();
     }
