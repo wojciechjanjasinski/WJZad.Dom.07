@@ -16,8 +16,9 @@ public class SquaresSum {
         }
 
         for (Double userNumbersInput : userTable) {
-            System.out.println(Math.pow(sum += userNumbersInput, 2));
+            sum += userNumbersInput;
         }
 
+        System.out.println(Math.pow(sum, 2));
     }
 }
